@@ -1,1 +1,1 @@
-# kpshop-theme
+# kpshop theme

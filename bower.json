@@ -1,0 +1,28 @@
+{
+  "name": "kpshop theme",
+  "homepage": "https://github.com/brugoncalvesss/kpshop-theme",
+  "authors": [
+    "Bruno Gonçalves <bcgonca@gmail.com>"
+  ],
+  "description": "Template para desenvolver temas da plataforma de e-commerce Tray",
+  "keywords": [
+    "tray",
+    "temas",
+    "opencode",
+    "ecommerce",
+    "design",
+    "frontend",
+    "ux"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": ">=3.2.0"
+  }
+}
