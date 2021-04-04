@@ -1,3 +1,8 @@
+/* reset tray css */
+.container {
+    background: none;
+}
+
 body {
     font-family: 'Spartan', sans-serif;
     font-size: 0.75rem;
@@ -20,7 +25,8 @@ body {
 
 /* Benefícios */
 .header-top {
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
+    color: #000;
 }
 
 .header-top .list-inline-item {
@@ -37,6 +43,10 @@ body {
     position: relative;
     padding: .75rem 1.25rem;
     border: .0625rem solid transparent;
+}
+
+.infobox + .infobox {
+    border-bottom: 0;
 }
 
 .infobox, .infobox span {
@@ -58,4 +68,9 @@ body {
     margin-bottom: 1rem;
     border: .0625rem solid transparent;
     border-radius: .3125rem;
+}
+
+/* Brand */
+.brand {
+    text-decoration: none;
 }
