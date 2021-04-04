@@ -1,47 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="./css/theme.min.css">
+    <link rel="stylesheet" href="./css/theme.css" />
 
     <title>KP</title>
-  </head>
-  <body>
+</head>
 
+<body>
     <div class="header-top d-none d-md-block bg-nude">
         <div class="container">
             <ul class="list-inline text-uppercase text-center py-2 mb-0">
                 <li class="list-inline-item">Entrega em todo Brasil</li>
-                <li class="list-inline-item">Pague em atÈ Xx sem juros</li>
-                <li class="list-inline-item">Troca r·pida e f·cial</li>
+                <li class="list-inline-item">Pague em at√© Xx sem juros</li>
+                <li class="list-inline-item">Troca r√°pida e f√°cial</li>
             </ul>
         </div>
     </div>
 
     <nav class="navbar navbar-expand-md justify-content-between">
         <div class="container">
-            
             <div class="nav-menu">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <div>KPSHOP</div>
+            <div>
+                <a class="brand" href="/" title="KP SHOP ">KP SHOP </a>
+            </div>
             <div class="nav-shop">
                 <ul class="nav">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">C</a>
-                    </li>
+                    <ul>
+                        <span class="tray-hide" data-logged-user="true">
+                            <li>Ol√° <span data-customer="name"></span></li>
+                            <li><a href="/loja/logout.php?loja=980606">Sair</a></li>
+                        </span>
+                        <span class="" data-logged-user="false">
+                            <li>
+                                <a href="/central-do-cliente">Login</a> |
+                                <a href="">Crie sua conta</a>
+                            </li>
+                        </span>
+                        <li>
+                            <a class="glyphicon glyphicon-shopping-cart" href="/loja/carrinho.php?loja=980606">
+                                <span data-cart="amount">0</span> itens no carrinho
+                            </a>
+                        </li>
+                    </ul>
                 </ul>
             </div>
-            
         </div>
     </nav>
 
@@ -49,20 +66,21 @@
         <div class="container">
             <div class="navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-  </body>
+</body>
+
 </html>
