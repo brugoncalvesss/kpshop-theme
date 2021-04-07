@@ -4,7 +4,7 @@
   <div class="container">
       <ul class="list-inline text-uppercase text-center py-2 mb-0">
           <li class="list-inline-item">Entrega em todo Brasil</li>
-          <li class="list-inline-item">Pague em até Xx sem juros</li>
+          <li class="list-inline-item">Pague em até 12x sem juros</li>
           <li class="list-inline-item">Troca rápida e fácil</li>
       </ul>
   </div>
@@ -12,38 +12,25 @@
 
 <nav class="navbar navbar-expand-md justify-content-between">
   <div class="container">
-      
-      <div class="nav-menu">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-      </div>
-      <div>
-        <a class="brand" href="{{ links.home }}" title="{{ store.name }}">{{ store.name }}</a>
-      </div>
-      <div class="nav-shop">
-        {% element 'snippets/customer' %}
-      </div>
+
+    <a class="brand" href="/" title="KP SHOP">KP SHOP</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navCategoria" aria-controls="navCategoria" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="nav-shop">
+      {% element 'snippets/customer' %}
+    </div>
       
   </div>
 </nav>
 
 <nav class="py-2">
   <div class="container">
-      <div class="navbar-collapse" id="navbarSupportedContent">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-      </div>
+    <!-- <div class="navbar-collapse" id="navCategoria"> -->
+    <div>
+    {% element 'snippets/menu_categories' %}
+    </div>
   </div>
 </nav>
-
-{% element 'snippets/customer' %}

@@ -1,0 +1,9 @@
+<ul class="nav">
+  {% for category in categories %}
+    {% if loop.index <= limit or not limit %}
+    <li class="nav-item">
+      <a class="nav-link" href="{{ category.link }}">{{ category.name }}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
