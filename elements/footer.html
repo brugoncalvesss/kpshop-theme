@@ -2,19 +2,20 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <h4 class="footer-title">Loja</h4>
-                {% element 'snippets/categories_list' {'limit': 6} %}
-            </div>
-            <div class="col-sm-3">
-                <h4 class="footer-title">Ajuda</h4>
+                <h4 class="footer-title">Trocas e devoluções</h4>
                 {% element 'snippets/help_links' %}
             </div>
             <div class="col-sm-3">
-                <h4 class="footer-title">Siga-nos</h4>
-                {% element 'snippets/contact_links' %}
+                <h4 class="footer-title">Institucional</h4>
+                {% element 'snippets/categories_list' {'limit': 6} %}
             </div>
             <div class="col-sm-3">
-                <h4 class="footer-title">Inscreva-se</h4>
+                <h4 class="footer-title">Fale conosco</h4>
+                {% element 'snippets/contact_links' %}
+                {% element 'snippets/social_links' %}
+            </div>
+            <div class="col-sm-3">
+                <h4 class="footer-title">Newsletter</h4>
                 {% element 'snippets/newsletter' %}
             </div>
         </div>
