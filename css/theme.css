@@ -8,19 +8,28 @@ body {
     font-size: 0.75rem;
     letter-spacing: 0.02rem;
     font-weight: 400;
-    color: #212529;
+    color: #2D2C2F;
 }
 
 .dropdown-menu {
     font-size: 0.75rem;
 }
 
-.bg-nude {
-    background-color: #efeae2!important;
+/* Cores */
+a {
+    color: #000;
 }
 
-.text-color {
-    color: #efeae2!important;
+a:hover {
+    color: rgba(0, 0, 0, .7);
+}
+
+.bg-nude {
+    background-color: #E4D7C5!important;
+}
+
+.text-nude {
+    color: #E4D7C5!important;
 }
 
 /* Benefícios */
@@ -73,4 +82,23 @@ body {
 /* Brand */
 .brand {
     text-decoration: none;
+}
+
+/* Menu categorias */
+.menu-categorie .nav-link,
+.menu-categorie .dropdown-item {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer .footer-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.footer .list .list-group-item {
+    padding-left: 0;
+    padding-right: 0;
+    border: 0;
 }
