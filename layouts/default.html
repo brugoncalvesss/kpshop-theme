@@ -13,6 +13,9 @@
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
     <!-- custom css -->
     <link rel="stylesheet" href="{{ asset('css/theme.css') }}">
@@ -36,9 +39,33 @@
     {% endif %}
 
     <div class="container">
-        <div class="row">
-            <img src="http://email.gallerist.com.br/banners1/banner%201-min.jpg" class="img-fluid">
+
+        <div class="hero-master">
+          <img src="http://email.gallerist.com.br/banners1/banner%201-min.jpg" class="img-fluid">
         </div>
+  
+        <div class="row g-0">
+          <div class="col-sm-6">
+            <img src="http://email.gallerist.com.br/banners1/banner%202-min.jpg" class="img-fluid">
+          </div>
+          <div class="col-sm-6">
+            <img src="http://email.gallerist.com.br/banners1/banner%203-min.jpg" class="img-fluid">
+          </div>
+        </div>
+  
+        <div class="categorie-newin">
+          <img src="http://email.gallerist.com.br/banners1/banner%204-min.jpg" class="img-fluid">
+        </div>
+  
+        <div class="row g-0">
+          <div class="col-sm-6">
+            <img src="http://email.gallerist.com.br/banners1/banner%205-min.jpg" class="img-fluid">
+          </div>
+          <div class="col-sm-6">
+            <img src="http://email.gallerist.com.br/banners1/banner%206-min.jpg" class="img-fluid">
+          </div>
+        </div>
+        
     </div>
 
     {% if pages.current == 'home' and banner.home %}
