@@ -1,27 +1,21 @@
-<ul class="navbar-nav ms-auto">
-  <li class="nav-item">
-    <span class="tray-hide nav-link" data-logged-user="true">
-      Olá <span data-customer="name"></span>
-    </span>
+<ul class="nav ms-auto align-items-center">
+  <li class="nav-item tray-hide" data-logged-user="true">
+    Olá <span data-customer="name"></span>
+    <a class="btn btn-soft-primary" href="{{ links.logout }}">Sair</a>
+  </li>
+  <li class="nav-item dropdown tray-hide" data-logged-user="false">
+    <a class="btn btn-soft-primary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="far fa-user"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" href="{{ links.login }}">Login</a></li>
+      <li><a class="dropdown-item" href="{{ links.sign_in }}">Crie sua conta</a></li>
+    </ul>
   </li>
   <li class="nav-item">
-    <span class="tray-hide" data-logged-user="true">
-      <a class="nav-link" href="{{ links.logout }}">Sair</a>
-    </span>
-  </li>
-  <li class="nav-item">
-    <span class="tray-hide" data-logged-user="false">
-      <a class="nav-link" href="{{ links.login }}">Login</a>
-    </span>
-  </li>
-  <li class="nav-item">
-    <span class="tray-hide" data-logged-user="false">
-      <a class="nav-link" href="{{ links.sign_in }}">Crie sua conta</a>
-    </span>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{{ links.cart }}">
-      <span data-cart="amount"></span> itens no carrinho
+    <a class="btn btn-icon btn-soft-primary rounded-circle ms-2 mb-3" href="{{ links.cart }}">
+      <i class="fas fa-shopping-cart"></i>
+      <span data-cart="amount" class="btn-status btn-status-primary"></span>
     </a>
   </li>
 </ul>
