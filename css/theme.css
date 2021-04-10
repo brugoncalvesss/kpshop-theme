@@ -15,6 +15,31 @@ body {
     font-size: 0.75rem;
 }
 
+/* Heading */
+.h1, h1 {
+    font-size: 1.375rem;
+}
+
+.h2, h2 {
+    font-size: 1.25rem;
+}
+
+.h3, h3 {
+    font-size: 1.125rem;
+}
+
+.h4, h4 {
+    font-size: 1rem;
+}
+
+.h5, h5 {
+    font-size: 0.875rem;
+}
+
+.h6, h6 {
+    font-size: 0.75rem;
+}
+
 /* Cores */
 a {
     color: #000;
@@ -93,7 +118,7 @@ a:hover {
 
 /* Footer */
 .footer .footer-title {
-    font-size: 1rem;
+    font-size: 0.875rem;
     text-transform: uppercase;
 }
 
@@ -101,4 +126,136 @@ a:hover {
     padding-left: 0;
     padding-right: 0;
     border: 0;
+    background-color: transparent;
+}
+
+.footer .list-adress .list-group-item {
+    padding: .25rem 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.footer .list-adress {
+    margin-bottom: .75rem;
+}
+
+.social-list {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Forms */
+.form-control {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: #2D2C2F;
+}
+
+.form-control-flush {
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-color: rgba(0, 0, 0, .7);
+    box-shadow: none;
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+}
+
+.form-control:focus {
+    color: #1e2022;
+    background-color: transparent;
+    border-bottom-color: rgba(0, 0, 0, 1);
+    outline: 0;
+}
+
+.form-control-flush:focus {
+    box-shadow: none;
+}
+
+/* Buttons */
+.btn {
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+
+.btn-icon {
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 400;
+    width: 2.625rem;
+    height: 2.625rem;
+    padding: 0;
+}
+
+.btn-soft-primary {
+    color: #377dff;
+    background-color: rgba(55,125,255,.1);
+    border-color: transparent;
+}
+
+.btn-status {
+    position: absolute;
+    top: -.4375rem;
+    right: -.4375rem;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 0.625rem;
+    font-weight: 600;
+    width: 21px;
+    height: 21px;
+    background-color: #bdc5d1;
+    border: .125rem solid #fff;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.btn-status-primary {
+    color: #fff;
+    background-color: #377dff;
+}
+
+.btn.rounded-circle .btn-status {
+    top: -.29167rem;
+    right: -.29167rem;
+}
+
+.btn.rounded-circle .btn-lg-status {
+    top: -.49rem;
+    right: -.49rem;
+}
+
+.btn-newsletter {
+    color: #1e2022;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+/* List */
+.list-group a {
+    text-decoration: none;
+}
+
+.list-group a:hover {
+    text-decoration: underline;
+}
+
+.list-group .list-group-item {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
 }
