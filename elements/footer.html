@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer bg-nude py-5">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
@@ -7,7 +7,7 @@
             </div>
             <div class="col-sm-3">
                 <h4 class="footer-title">Institucional</h4>
-                {% element 'snippets/categories_list' {'limit': 6} %}
+                {% element 'snippets/page_links' %}
             </div>
             <div class="col-sm-3">
                 <h4 class="footer-title">Fale conosco</h4>
@@ -19,6 +19,5 @@
                 {% element 'snippets/newsletter' %}
             </div>
         </div>
-        {% element 'snippets/address' %}
     </div>
 </footer>
