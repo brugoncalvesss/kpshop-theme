@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <link rel="stylesheet" href="./css/theme.css" />
 
@@ -20,46 +23,46 @@
         <div class="container">
             <ul class="list-inline text-uppercase text-center py-2 mb-0">
                 <li class="list-inline-item">Entrega em todo Brasil</li>
-                <li class="list-inline-item">Pague em até Xx sem juros</li>
-                <li class="list-inline-item">Troca rápida e fácial</li>
+                <li class="list-inline-item">Pague em ate Xx sem juros</li>
+                <li class="list-inline-item">Troca rapida e facil</li>
             </ul>
         </div>
     </div>
 
     <nav class="navbar navbar-expand-md">
         <div class="container">
+
             <a class="brand" href="/" title="KP SHOP">KP SHOP</a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navCategoria" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="nav-shop">
-              <ul class="nav">
-                <li class="nav-item">
-                  <span class="tray-hide nav-link" data-logged-user="true">
-                    Ola <span data-customer="name"></span>
-                  </span>
-                </li>
-                <li class="nav-item">
-                  <span class="tray-hide" data-logged-user="true">
-                    <a class="nav-link" href="{{ links.logout }}">Sair</a>
-                  </span>
-                </li>
-                <li class="nav-item">
-                  <span class="tray-hide" data-logged-user="false">
-                    <a class="nav-link" href="{{ links.login }}">Login</a>
-                  </span>
-                </li>
-                <li class="nav-item">
-                  <span class="tray-hide" data-logged-user="false">
-                    <a class="nav-link" href="{{ links.sign_in }}">Crie sua conta</a>
-                  </span>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ links.cart }}">
-                    <span data-cart="amount"></span> itens no carrinho
+              <ul class="nav ms-auto align-items-center">
+                <li class="nav-item tray-hide" data-logged-user="true">
+                  Ola <span data-customer="name">Brunouro</span>
+                  <a class="btn btn-soft-primary ms-md-2" href="{{ links.logout }}">
+                    <i class="fas fa-sign-out-alt"></i>
                   </a>
                 </li>
-              </ul>                                     
+                <li class="nav-item dropdown tray-hide" data-logged-user="false">
+                  <a class="btn btn-soft-primary dropdown-toggle ms-md-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="far fa-user"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="{{ links.login }}">Login</a></li>
+                    <li><a class="dropdown-item" href="{{ links.sign_in }}">Crie sua conta</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-icon btn-soft-primary rounded-circle ms-2" href="{{ links.cart }}">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span data-cart="amount" class="btn-status btn-status-primary">3</span>
+                  </a>
+                </li>
+              </ul>
+                                                            
             </div>
         </div>
     </nav>
@@ -67,9 +70,9 @@
     <nav class="py-2">
         <div class="container">
             <div>
-                <ul class="nav">
+                <ul class="nav menu-categorie">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
@@ -78,12 +81,15 @@
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown04">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
                   </li>
                 </ul>
       
@@ -92,11 +98,74 @@
     </nav>
 
     <div class="container">
-      <img src="http://email.gallerist.com.br/banners1/banner%201-min.jpg" class="img-fluid">
+
+      <div class="hero-master">
+        <img src="http://email.gallerist.com.br/banners1/banner%201-min.jpg" class="img-fluid">
+      </div>
+
+      <div class="row g-0">
+        <div class="col-sm-6">
+          <img src="http://email.gallerist.com.br/banners1/banner%202-min.jpg" class="img-fluid">
+        </div>
+        <div class="col-sm-6">
+          <img src="http://email.gallerist.com.br/banners1/banner%203-min.jpg" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="categorie-newin">
+        <img src="http://email.gallerist.com.br/banners1/banner%204-min.jpg" class="img-fluid">
+      </div>
+
+      <div class="row g-0">
+        <div class="col-sm-6">
+          <img src="http://email.gallerist.com.br/banners1/banner%205-min.jpg" class="img-fluid">
+        </div>
+        <div class="col-sm-6">
+          <img src="http://email.gallerist.com.br/banners1/banner%206-min.jpg" class="img-fluid">
+        </div>
+      </div>
+      
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <footer class="footer bg-nude py-5">
+      <div class="container">
+          <div class="row">
+            <div class="col-sm-3">
+              <h4 class="footer-title">TROCAS E DEVOLUCOES</h4>
+                {% element 'snippets/help_links' %}
+            </div>
+            <div class="col-sm-3">
+              <h4 class="footer-title">INSTITUCIONAL</h4>
+              {% element 'snippets/categories_list' {'limit': 6} %}
+            </div>
+            <div class="col-sm-3">
+              <h4 class="footer-title">FALE CONOSCO</h4>
+              {% element 'snippets/contact_links' %}
+            </div>
+            <div class="col-sm-3">
+              <h4 class="footer-title">Inscreva-se</h4>
+
+              <p>
+                Fique por dentro das novidades.<br>
+                Tendencias e apostas {{ store.name }}!
+              </p>
+              <form action="{{ links.newsletter }}" method="POST" class="row g-0">
+                  <input type="hidden" name="loja" value="{{ store.id }}">
+                  <div class="col me-sm-1">
+                      <input name="email" type="email" class="form-control form-control-flush" placeholder="hello@email.com">
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-outline-dark mb-3 btn-newsletter">Cadastrar</button>
+                  </div>
+              </form>            
+            
+            </div>
+          </div>
+      </div>
+    </footer>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 
 </html>
