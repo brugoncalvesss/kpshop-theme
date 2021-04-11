@@ -3,7 +3,7 @@
     Olá <span data-customer="name"></span>
     <a class="btn btn-soft-primary" href="{{ links.logout }}">Sair</a>
   </li>
-  <li class="nav-item dropdown tray-hide" data-logged-user="false">
+  <li class="nav-item dropdown" data-logged-user="false">
     <a class="btn btn-soft-primary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="far fa-user"></i>
     </a>
@@ -13,9 +13,9 @@
     </ul>
   </li>
   <li class="nav-item">
-    <a class="btn btn-icon btn-soft-primary rounded-circle ms-2 mb-3" href="{{ links.cart }}">
+    <a class="btn btn-icon btn-soft-primary rounded-circle ms-2" href="{{ links.cart }}">
       <i class="fas fa-shopping-cart"></i>
-      <span data-cart="amount" class="btn-status btn-status-primary"></span>
+      <span data-cart="amount" class="btn-status btn-status-primary">0</span>
     </a>
   </li>
 </ul>
