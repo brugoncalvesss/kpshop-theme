@@ -16,6 +16,15 @@ body {
 }
 
 /* Heading */
+.h1, h1,
+.h2, h2,
+.h3, h3,
+.h4, h4,
+.h5, h5,
+.h6, h6 {
+    font-family: 'Lustria', serif;
+}
+
 .h1, h1 {
     font-size: 1.375rem;
 }
@@ -40,13 +49,22 @@ body {
     font-size: 0.75rem;
 }
 
+p {
+    border-bottom-width: 0;
+}
+
 /* Cores */
 a {
     color: #000;
+    text-decoration: none;
 }
 
 a:hover {
     color: rgba(0, 0, 0, .7);
+}
+
+a:focus {
+    outline: none;
 }
 
 .bg-nude {
@@ -261,4 +279,78 @@ a:hover {
 .list-group .list-group-item {
     padding-top: .25rem;
     padding-bottom: .25rem;
+}
+
+/* Banner */
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: .75rem 1rem;
+}
+
+.breadcrumb .breadcrumb-item {
+    color: #1e2022;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.breadcrumb-sm .breadcrumb-item {
+    font-size: 0.625rem;
+}
+
+.breadcrumb-item+.breadcrumb-item {
+    padding-left: .5rem;
+}
+
+.breadcrumb .breadcrumb-link {
+    color: #8c98a4;
+}
+
+.breadcrumb .breadcrumb-link:hover {
+    color: #1e2022;
+}
+
+/* Catalog */
+.catalog-title {
+    color: #000;
+    font-weight: 400;
+}
+
+/* Product */
+.product .product-image {
+    margin-bottom: 1.5rem;
+}
+
+.product .product-brand {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.produto-wrapper .product-brand {
+    font-family: 'Lustria', serif;
+    letter-spacing: .08em;
+    font-size: 1.25rem;
+    color: #000;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.produto-wrapper .product-name {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.produto-wrapper .product-name h1 {
+    letter-spacing: .08em;
+    font-size: 1.125rem;
+    color: #474747;
+    display: block;
+}
+
+.produto-wrapper .product-reference {
+    margin-bottom: 1.5rem;
 }
