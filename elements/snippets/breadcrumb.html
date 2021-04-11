@@ -1,20 +1,19 @@
-{#
-# Este breadcrumb exibe a p�gina em que o us�ario se encontra,
-# mesmo estando no primeiro n��vel da categoria o caminho ser� exibido.
-# elements/snippets/breadcrumb.html
-#}
-
-<div class="breadcrumb">
-  <span class="breadcrumb-text">
-    Voc� est� em:
-  </span>
-  <span class="breadcrumb-item"><a href="/">P�gina inicial</a></span>
-  <span class="icon-breadcrumb">&gt</span>
-  {% if breadcrumb %}
-    {% for item in breadcrumb %}
-      <span class="breadcrumb-item"><a href="{{ item.link}}" title="{{ item.name }}">{{ item.name }}</a></span>
-      <span class="icon-breadcrumb">&gt</span>
-    {% endfor %}
-    <span class="breadcrumb-item">{{ pages.current == 'product' ? product.name : category.name }}</span>
-  {% endif %}
-</div>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-sm px-0">
+        <li class="breadcrumb-item">
+            <a class="breadcrumb-link" href="/">Home</a>
+        </li>
+        {% if breadcrumb %}
+            {% for item in breadcrumb %}
+            <li class="breadcrumb-item">
+                <a class="breadcrumb-link" href="{{ item.link}}" title="{{ item.name }}">
+                    {{ item.name }}
+                </a>
+            </li>
+            {% endfor %}
+            <li class="breadcrumb-item active" aria-current="page">
+                {{ pages.current == 'product' ? product.name : category.name }}
+            </li>
+        {% endif %}
+    </ol>
+</nav>
