@@ -120,6 +120,9 @@ a:hover {
 .footer .footer-title {
     font-size: 0.875rem;
     text-transform: uppercase;
+    letter-spacing: 0.04rem;
+    color: #000;
+    margin-bottom: 1rem;
 }
 
 .footer .list .list-group-item {
