@@ -1,12 +1,18 @@
-<div itemscope itemtype="http://schema.org/Product">
+<div itemscope itemtype="http://schema.org/Product" class="text-center">
     <a href="{{ product.link }}" itemprop="url">
         <div class="product-image">
             {% set loading = tray.paths.system_image ~ "/loading.gif" %}
-            <img class="img-responsive lazy" data-original="{{ product.images[0].large }}" src="{{ loading }}" alt="{{ product.name }}">
+            <img class="img-fluid lazy" data-original="{{ product.images[0].large }}" src="{{ loading }}" alt="{{ product.name }}">
         </div>
+
+        {% if product.brand %}
+        <div class="product-brand">{{ product.brand }}</div>
+        {% endif %}
+
         <div class="product-name" itemprop="name">
             <h3>{{ product.name }}</h3>
         </div>
-          {% element 'snippets/price' {"product": product} %}
+
+        {% element 'snippets/price' {"product": product} %}
     </a>
 </div>

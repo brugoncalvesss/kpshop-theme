@@ -1,21 +1,77 @@
 <div id="product-container" class="produto-wrapper" itemscope itemtype="http://schema.org/Product">
+    
     <span id="span_erro_carrinho"></span>
+
     <div id="loading-product-container">
         <img src='{{ tray.paths.system_image }}/big-loading.svg' />
     </div>
-    <div id="title">
-        {% element 'snippets/breadcrumb' %}
-        <span class="product-id">
-          {{ Translation('codigo') }}:
-          <strong>
-              {{ product.id }}
-          </strong>
-        </span>
-        <h3 class="product-title">{{ product.name }}</h3>
+
+    <div class="row">
+        <div class="col-sm-7">
+
+            <div id="visualBlock" class="product-gallery">
+                {{ productHelper.gallery() }}
+            </div>
+
+        </div>
+        <div class="col-sm-5">
+
+            <!-- product info -->
+            <div class="product-info">
+
+                {% if product.brand %}
+                <div class="product-brand">{{ product.brand }}</div>
+                {% endif %}
+
+                <div class="product-name">
+                    <h1 class="h5">{{ product.name }}</h1>
+                </div>
+
+                {% if product.reference %}
+                <div class="product-reference">
+                    <span class="text-uppercase text-muted small">cod.{{ product.reference }}</span>
+                </div>
+                {% endif %}
+
+                <div class="product-breadcrumb">
+                    {% element 'snippets/breadcrumb' %}
+                </div>
+
+                <div class="product-buy-content">
+                    <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
+                        {{ productHelper.pricing() }}
+                        {{ productHelper.variants() }}
+                        {{ product.additional_information }}
+                        {{ productHelper.gifts() }}
+                        {{ productHelper.form() }}
+                        {{ productHelper.wishlist() }}
+                        {{ productHelper.shipping() }}
+                    </form>
+                </div>
+
+            </div>
+            <!-- end product info -->
+
+            {% element 'product/rating' %}
+            <div class="product-labels">
+                {{ productHelper.labels() }}
+            </div>
+            <p class="product-details">
+                {{ productHelper.details() }}
+                {{ productHelper.icons() }}
+            </p>
+            {{ productHelper.bonus() }}
+
+            <p class="product-message">
+                {{ product.additional_message }}
+            </p>
+
+        </div>
     </div>
+
     <div class="row">
         <div class="col-md-6 no-padding">
-            <div id="visualBlock" class="product-gallery">
+            <div id="visualBlock-bkp" class="product-gallery-bkp">
                 {{ productHelper.gallery() }}
             </div>
             <div class="product-social">
