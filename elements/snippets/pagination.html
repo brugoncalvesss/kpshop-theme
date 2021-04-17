@@ -1,0 +1,18 @@
+<nav class="pagination justify-content-center mb-2">
+{% if paginate.params.pageCount > 1 %}
+    {% if paginate.hasPrev %}
+        {{ paginate.prev('«', {'class': 'page-prev'}) }}
+    {% endif %}
+    
+    {{ paginate.numbers({
+        'modulus': 9,
+        'separator': '',
+        'class': 'page-item',
+        'currentClass': 'active'
+    }) }}
+    
+    {% if paginate.hasNext %}
+        {{ paginate.next('»', {'class': 'page-next'}) }}
+    {% endif %}
+{% endif %}
+</nav>
