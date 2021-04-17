@@ -306,7 +306,7 @@ a:focus {
     font-size: 0.625rem;
 }
 
-.breadcrumb-item +.breadcrumb-item {
+.breadcrumb-item + .breadcrumb-item {
     padding-left: .5rem;
 }
 
