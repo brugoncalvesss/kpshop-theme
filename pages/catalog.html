@@ -14,29 +14,25 @@
 
 {% endif %}
 
-<div class="text-center my-3">
-    <h1 class="catalog-title">{{ category.name }}</h1>
+<div class="text-center mt-4 mb-5">
+    <h1 class="h2 catalog-title">{{ category.name }}</h1>
 </div>
 
 {% if products|length > 0 %}
 
-    <div class="vspace-sm">
-        {% element 'snippets/filter' {
+    <div class="d-none">
+        {#% element 'snippets/filter' {
             'brands': category.brands
-        } %}
+        } %#}
     </div>
 
-    <div class="vspace-sm">
-        {% element 'snippets/pagination' %}
-    </div>
-
-    <div class="vspace-sm">
+    <div class="d-block">
         {% element 'snippets/showcase' {
             "products": products
         } %}
     </div>
 
-    <div class="vspace-sm">
+    <div class="d-block">
         {% element 'snippets/pagination' %}
     </div>
 
