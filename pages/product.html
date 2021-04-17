@@ -20,7 +20,7 @@
             <div class="product-info">
 
                 {% if product.brand %}
-                <div class="product-brand">{{ product.brand }}</div>
+                <div class="product-brand mb-2">{{ product.brand }}</div>
                 {% endif %}
 
                 <div class="product-name">
@@ -66,60 +66,9 @@
                 {{ product.additional_message }}
             </p>
 
-        </div>
-    </div>
+        </div><!-- end col -->
 
-    <div class="row">
-        <div class="col-md-6 no-padding">
-            <div id="visualBlock-bkp" class="product-gallery-bkp">
-                {{ productHelper.gallery() }}
-            </div>
-            <div class="product-social">
-                {{ productHelper.social() }}
-            </div>
-            <div class="product-links">
-                <span class="produto-recommend">
-                    <a href="#" data-url="{{ links.product_recommend ~ product.id }}" data-title="{{ product.name }}" class="botao_indique_amigo" data-toggle="modal" data-target="#modal-form" data-modal-width="600px">{{ Translation('indique_amigo') }}</a>
-                </span>
-
-                <span class="product-question">
-                    <a href="#" data-url="{{ links.product_question ~ product.id }}" data-title="{{ product.name }}" class="botao_tire_duvidas" data-toggle="modal" data-target="#modal-form" data-modal-width="600px">{{ Translation('tire_duvidas') }}</a>
-                </span>
-
-                {% if settings.compare %}
-                  <span id="comparar">
-                      {% element 'product/compare' {
-                          'product': product,
-                          'links': links
-                      } %}
-                  </span>
-                {% endif %}
-            </div>
-        </div>
-        <div class="col-md-6">
-            {% element 'product/rating' %}
-            <div class="product-labels">
-                {{ productHelper.labels() }}
-            </div>
-            <p class="product-details">
-                {{ productHelper.details() }}
-                {{ productHelper.icons() }}
-            </p>
-            {{ productHelper.bonus() }}
-            <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
-                {{ productHelper.pricing() }}
-                {{ productHelper.variants() }}
-                {{ product.additional_information }}
-                {{ productHelper.gifts() }}
-                {{ productHelper.form() }}
-                {{ productHelper.wishlist() }}
-                {{ productHelper.shipping() }}
-            </form>
-            <p class="product-message">
-                {{ product.additional_message }}
-            </p>
-        </div>
-    </div>
+    </div><!-- end row -->
 </div>
 
 <div id="ProdBlock">
