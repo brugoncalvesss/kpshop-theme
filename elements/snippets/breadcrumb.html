@@ -11,7 +11,7 @@
                 </a>
             </li>
             {% endfor %}
-            {{ if pages.current != 'product' }}
+            {% if pages.current == 'catalog' %}
             <li class="breadcrumb-item active" aria-current="page">
                 {{ pages.current == 'product' ? product.name : category.name }}
             </li>
