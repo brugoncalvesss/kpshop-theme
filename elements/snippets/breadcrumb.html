@@ -12,7 +12,7 @@
             </li>
             {% endfor %}
             <li class="breadcrumb-item active" aria-current="page">
-                {{ pages.current == 'product' ? product.name : category.name }}
+                {{ pages.current == 'product' ? '' : category.name }}
             </li>
         {% endif %}
     </ol>
