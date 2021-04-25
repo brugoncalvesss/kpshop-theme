@@ -123,12 +123,20 @@ a:focus {
     background-color: rgba(237,76,120,.1);
 }
 
-.alert {
+.alert,
+.blocoAlerta,
+.message {
     position: relative;
     padding: .75rem 1.25rem;
     margin-bottom: 1rem;
     border: .0625rem solid transparent;
     border-radius: .3125rem;
+}
+
+.blocoAlerta,
+.message {
+    font-family: inherit;
+    background-image: none;
 }
 
 /* Brand */
@@ -175,10 +183,34 @@ a:focus {
 }
 
 /* Forms */
-.form-control {
-    font-size: 0.75rem;
-    line-height: 1.6;
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
     color: #2D2C2F;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-control:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    color: #212529;
+    border-color: #000;
+    outline: 0;
 }
 
 .form-control-flush {
@@ -319,6 +351,10 @@ a:focus {
     content: '|';
 }
 
+.breadcrumb-item.active:empty::before {
+    content: none;
+}
+
 .breadcrumb .breadcrumb-link {
     color: #8c98a4;
 }
@@ -364,14 +400,139 @@ a:focus {
 }
 
 .produto-wrapper .product-name h1 {
+    font-family: 'Spartan', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
     letter-spacing: .08em;
-    font-size: 1.125rem;
     color: #474747;
 }
 
 .produto-wrapper .product-reference {
     margin-bottom: 1.5rem;
 }
+
+.product-buy-content #preco {
+    font-size: inherit;
+    font-weight: 400;
+    border: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.product-buy-content #info_preco {
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-style: normal;
+    color: #a8a8a8;
+}
+
+.product-buy-content .txt-por,
+.product-buy-content br {
+    display: none;
+}
+
+.product-buy-content abbr,
+.product-buy-content .currency,
+.product-buy-content .produto-economize
+.product-buy-content .precode .currency {
+    cursor: default;
+    text-decoration: none;
+}
+
+.product-buy-content strong {
+    font-weight: 400;
+}
+
+.product-buy-content .precode {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #888;
+}
+
+.product-buy-content .PrecoPrincipal {
+    font-size: 1.125rem;
+    letter-spacing: .08em;
+    font-weight: 500;
+    color: #000;
+    display: block;
+}
+
+.product-buy-content .botao-commerce {}
+
+/* Produto indisponível */
+.product-buy-content #produto_nao_disp {
+    margin-top: 1.5rem;
+}
+
+.product-buy-content #produto_nao_disp .botao-nao_indisponivel {
+    font-family: 'Lustria', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    color: #000;
+}
+
+.product-buy-content #produto_nao_disp .botao-nao_indisponivel::after {
+    content: 'Para ser avisado da disponibilidade deste produto, basta preencher os campos abaixo.';
+    font-family: 'Spartan', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    display: block;
+    padding-top: .5rem;
+}
+
+.product-buy-content #produto_nao_disp #nao_disp label {
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.product-buy-content #letMeKnow img {
+    display: none;
+}
+
+.product-buy-content #letMeKnow {
+    padding: .5rem .75rem;
+    line-height: 1.5;
+    color: #000;
+    background-color: #E4D7C5;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: .2s ease-out;
+}
+
+.product-buy-content #letMeKnow:hover {
+    background-color: #efe7dc;
+}
+
+.product-buy-content #letMeKnow::before {
+    content: "Avise-me quando chegar";
+    font-size: .75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.product-buy-content #produto_nao_disp #nao_disp .color {
+    font-size: .75rem;
+    color: #888;
+    margin-top: 1.5rem;
+}
+
+/*
+ * Economize R$00,00
+ * TODO: Verificar se é possível desabiitar no admin
+ */
+.product-buy-content .produto-economize {
+    display: none;
+}
+
 
 /* Paginate */
 .pagination {
