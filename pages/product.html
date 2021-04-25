@@ -41,10 +41,10 @@
                     <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
                         {{ productHelper.pricing() }}
                         {{ productHelper.variants() }}
-                        {{ product.additional_information }}
+                        <!-- {{ product.additional_information }} -->
                         {{ productHelper.gifts() }}
                         {{ productHelper.form() }}
-                        {{ productHelper.wishlist() }}
+                        <!-- {{ productHelper.wishlist() }} -->
                         {{ productHelper.shipping() }}
                     </form>
                 </div>
@@ -52,15 +52,25 @@
             </div>
             <!-- end product info -->
 
-            {% element 'product/rating' %}
-            <div class="product-labels">
+            <div class="product-rating d-none">
+                {% element 'product/rating' %}
+            </div>
+            
+            <div class="product-labels d-none">
                 {{ productHelper.labels() }}
             </div>
-            <p class="product-details">
+
+            <div class="product-details">
                 {{ productHelper.details() }}
+            </div>
+
+            <div class="produt-icons">
                 {{ productHelper.icons() }}
-            </p>
-            {{ productHelper.bonus() }}
+            </div>
+
+            <div class="product-bonus">
+                {{ productHelper.bonus() }}
+            </div>
 
             <p class="product-message">
                 {{ product.additional_message }}
@@ -127,7 +137,9 @@
 
 {% if product.related_products %}
 <div class="products-related">
-    <h3 class="related-title">Produtos Relacionados</h3>
+    <div class="related-header text-center py-3">
+        <h3 class="related-title text-uppercase">Quem comprou, comprou também</h3>
+    </div>
     <div class="row">
         {% for related in product.related_products %}
           <div class="col-sm-4 product">
