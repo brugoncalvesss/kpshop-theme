@@ -1,4 +1,4 @@
-<div id="product-container" class="produto-wrapper" itemscope itemtype="http://schema.org/Product">
+<div id="product-container" class="produto-wrapper my-2" itemscope itemtype="http://schema.org/Product">
     
     <span id="span_erro_carrinho"></span>
 
@@ -124,13 +124,18 @@
         </div>
     </div>
 
-    {{ productTabs.custom.content }}
-    {{ productTabs.downloads.content }}
+    
+    <div class="product-custom">
+        {{ productTabs.custom.content }}
+    </div>
+
+    <div class="product-downloads">
+        {{ productTabs.downloads.content }}
+    </div>
 
     <div id="garantia" class="prodBox">
         <img class="loader" src="{{ tray.paths.system_image }}/big-loading.svg" style="display:none;" />
     </div>
-    <div data-app="product.payment-methods" id="formasPagto" class="prodBox" style="display:none;" ></div>
 </div>
 
 {{ productHelper.bundle() }}
