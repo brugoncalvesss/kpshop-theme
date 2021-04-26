@@ -213,6 +213,7 @@ input[type="password"]:focus {
     outline: 0;
 }
 
+input[type="email"].form-control-flush,
 .form-control-flush {
     background-color: transparent;
     border-top: none;
@@ -457,7 +458,45 @@ input[type="password"]:focus {
     display: block;
 }
 
-.product-buy-content .botao-commerce {}
+.product-buy-content .botao-commerce {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    color: #000;
+    border-color: transparent;
+    background: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border-radius: 0;
+    padding: .375rem .75rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.product-buy-content .botao-commerce.botao-comprar {
+    background-color: #E4D7C5;
+    border-color: #E4D7C5;
+    padding: .75rem 1rem;
+    display: block;
+    width: 100%;
+}
+
+.product-buy-content .botao-commerce.botao-comprar:hover {
+    background-color: #EfE7DC;
+    border-color: #EfE7DC;
+}
+
+.product-buy-content .botao-comprar .botao-commerce-img {
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 0;
+    background: none;
+}
 
 /* Produto indisponível */
 .product-buy-content #produto_nao_disp {
