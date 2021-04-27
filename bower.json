@@ -23,6 +23,6 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": ">=5.0.0"
+    "bootstrap": ">=4.6.0"
   }
 }
