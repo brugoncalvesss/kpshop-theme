@@ -1,4 +1,4 @@
-<div id="product-container" class="produto-wrapper my-2" itemscope itemtype="http://schema.org/Product">
+<div id="product-container" class="produto-wrapper" itemscope itemtype="http://schema.org/Product">
     
     <span id="span_erro_carrinho"></span>
 
@@ -6,15 +6,13 @@
         <img src='{{ tray.paths.system_image }}/big-loading.svg' />
     </div>
 
-    <div class="row">
-        <div class="col-sm-7">
+    <div class="row justify-content-between">
+        <div class="col-lg-7">
 
-            <div id="visualBlock" class="product-gallery">
-                {{ productHelper.gallery() }}
-            </div>
+            {% element 'snippets/gallery' %}
 
         </div>
-        <div class="col-sm-5">
+        <div class="col-lg-5 mb-5 mb-lg-0">
 
             <!-- product info -->
             <div class="product-info">
@@ -49,15 +47,13 @@
                     </form>
                 </div>
 
-                <div class="product-description">
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseDescription" role="button" aria-expanded="false" aria-controls="collapseDescription">
-                        <div class="flex justify-content-between">
-                            <div class="text-uppercase">Descrição</div>
-                            <div>+</div>
-                        </div>
-                    </a>
+                <div class="product-description mt-5">
+                    <div class="description-title d-flex justify-content-between py-3" data-bs-toggle="collapse" href="#collapseDescription">
+                        <span class="text-uppercase">Descrição</span>
+                        <span>+</span>
+                    </div>
                     <div class="collapse" id="collapseDescription">
-                        <div class="card card-body">
+                        <div>
                             {{ product.description ? product.description : product.description_small }}
                         </div>
                     </div>
@@ -96,17 +92,17 @@
     </div><!-- end row -->
 </div>
 
-<div id="ProdBlock">
+<div id="ProdBlock" class="my-3">
     <div id="loading-tab-container">
         <img src='{{ tray.paths.system_image }}/big-loading.svg' />
     </div>
-    <a name="formaPagto"></a>
+
     <div id="ProdAbas" class="abasProduto">
-        <ul>
+        <ul class="nav nav-tabs">
             {% for key, tab in productTabs %}
               {% if tab.container_id %}
-              <li id="{{ tab.id }}" {% if key=='description' %}class="aberta" {% endif %}>
-                <a href="#" data-tab-container-id="{{ tab.container_id }}" data-tab-url="{{ tab.url }}">{{ tab.description }}</a>
+              <li id="{{ tab.id }}" class="nav-item" {% if key=='description' %}class="aberta" {% endif %}>
+                <a href="#" class="nav-link" data-tab-container-id="{{ tab.container_id }}" data-tab-url="{{ tab.url }}">{{ tab.description }}</a>
               </li>
               {% endif %}
             {% endfor %}
@@ -162,13 +158,12 @@
     </div>
     <div class="row">
         {% for related in product.related_products %}
-          <div class="col-sm-4 product">
-              {% element 'snippets/product' {"product": related} %}
-          </div>
-        {% if loop.index is divisible by(3) %}
-    </div>
-    <div class="row">
-          {% endif %} {% endfor %}
+            {% if loop.index <= limit or not limit %}
+            <div class="col-sm-4 product">
+                {% element 'snippets/product' {"product": related} %}
+            </div>
+            {% endif %}
+        {% endfor %}
     </div>
 </div>
 {% endif %}
