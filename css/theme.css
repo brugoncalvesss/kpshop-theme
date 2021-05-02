@@ -59,6 +59,7 @@ body {
 }
 
 p {
+    padding: 0;
     border-bottom-width: 0;
 }
 
@@ -583,6 +584,28 @@ input[type="email"].form-control-flush,
     margin-top: 1.5rem;
 }
 
+.product-info .product-description {
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+
+.product-info .product-description .description-title {
+    font-size: 0.875rem;
+    letter-spacing: .08em;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Formas de pagamento */
+.product-buy-content .produto-formas-pagamento {
+    display: none;
+}
+
+/* Quantidade */
+#quantidade {
+    display: none;
+}
+
 /*
  * Economize R$00,00
  * TODO: Verificar se é possível desabiitar no admin
@@ -590,7 +613,6 @@ input[type="email"].form-control-flush,
 .product-buy-content .produto-economize {
     display: none;
 }
-
 
 /* Paginate */
 .pagination {
@@ -630,4 +652,189 @@ input[type="email"].form-control-flush,
 
 .page-item:not(.active) .page-item a:hover {
     color: #000;
+}
+
+/* Galeria */
+.product-gallery .produto-imagem-abas {
+    display: none;
+}
+
+.product-gallery .conteudo {
+    padding: 0;
+}
+
+#col3D, #colFotos, #colVideo {
+    background: none;
+    padding: 0;
+    border: 0;
+}
+
+#colFotos #add {
+    display: none;
+}
+
+#foto_p {
+    border: 0;
+    padding: 0;
+}
+
+/* Tabs */
+.prodBox,
+#ProdAbas,
+#ProdAbas a,
+#ProdAbas .aberta,
+#ProdAbas .aberta a,
+#ProdAbas li {
+    background: none;
+    background-image: none;
+}
+
+#ProdAbas {
+    display: block;
+}
+
+#ProdAbas ul {
+    padding: 0;
+}
+
+#ProdAbas li {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+
+#ProdAbas a,
+#ProdAbas .aberta a {
+    padding: .5rem 1rem;
+}
+
+#ProdAbas a,
+#ProdAbas .aberta a {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+#ProdAbas a {
+    color: #2D2C2F;
+    letter-spacing: 0.08em;
+}
+
+#ProdAbas .aberta a {
+    color: #000;
+}
+
+#ProdAbas .nav-link {
+    border: 1px solid transparent;
+}
+
+#ProdAbas .aberta .nav-link {
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+/* carousel */
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    transition-delay: 0s;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-top: -1.5625rem;
+    text-align: center;
+    background: #fff;
+    z-index: 50;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 0;
+    margin-left: 10px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    -webkit-transform: translate(50%, 0);
+    -moz-transform: translate(50%, 0);
+    transform: translate(50%, 0);
+    right: 0;
+    margin-right: 10px;
+}
+
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+    background: transparent;
+}
+
+.owl-carousel .owl-nav button.owl-prev[class*="disabled"],
+.owl-carousel .owl-nav button.owl-next[class*="disabled"] {
+    opacity: 0;
+}
+
+.owl-carousel .owl-nav button.owl-prev span, .owl-carousel .owl-nav button.owl-next span {
+    display: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev::before,
+.owl-carousel .owl-nav button.owl-next::before {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    transition-delay: 0s;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size: 1.375rem;
+    color: #000;
+    line-height: 3.125rem;
+}
+
+.owl-nav button.owl-prev::before,
+.owl-nav button.owl-next::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.875rem;
+}
+
+.owl-nav button.owl-next::before {
+    content: "\f061";
+}
+
+.owl-nav button.owl-prev::before {
+    content: "\f060";
+}
+
+.owl-thumbs .owl-thumb-item {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    transition-delay: 0s;
+    display: block;
+    border: 1px solid transparent;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.owl-thumbs .owl-thumb-item.active {
+    border-color: #000;
+}
+
+@media (min-width: 768px) {
+    .owl-thumbs .owl-thumb-item:not(:last-child) {
+        margin-bottom: 0.625rem;
+    }
 }
