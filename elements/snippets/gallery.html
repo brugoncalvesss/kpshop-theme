@@ -1,0 +1,31 @@
+{% if product.images %}
+    <div class="row g-1 justify-content-between me-lg-3">
+        <div class="col-lg-10 order-lg-2">
+
+            <div class="owl-carousel product-carousel" data-slider-id="1">
+                {% set images = product.images %}
+                {% for image in images %}
+                <a data-fancybox="gallery" href="{{ image.full }}">
+                    <img src="{{ image.full }}">
+                </a>
+                {% endfor %}
+            </div>
+
+        </div>
+        <div class="col-lg-2 text-center text-lg-left order-lg-1">
+
+            <div class="owl-thumbs" data-slider-id="1">
+                {% for image in images %}
+                <span class="owl-thumb-item">
+                    <img src="{{ image.large }}" class="img-fluid">
+                </span>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+{% else %}
+    <div id="visualBlock" class="product-gallery">
+        {{ productHelper.gallery() }}
+    </div>
+{% endif %}
