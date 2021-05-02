@@ -266,6 +266,18 @@ input[type="email"].form-control-flush,
     border-color: transparent;
 }
 
+.btn-ghost-light {
+    color: #2D2C2F;
+    background-color: transparent;
+}
+
+.btn-ghost-light:hover,
+.btn-ghost-primary:active,
+.btn-ghost-primary.active {
+    color: #000;
+    background-color: #f5f8fa;
+}
+
 .btn-status {
     position: absolute;
     top: -.4375rem;
@@ -291,6 +303,11 @@ input[type="email"].form-control-flush,
 .btn-status-primary {
     color: #fff;
     background-color: #377dff;
+}
+
+.btn-status-nude {
+    color: #000;
+    background-color: #E4D7C5;
 }
 
 .btn.rounded-circle .btn-status {
@@ -332,6 +349,7 @@ input[type="email"].form-control-flush,
 /* Breadcrumb */
 .breadcrumb {
     padding: .75rem 1rem;
+    background-color: transparent;
 }
 
 .breadcrumb .breadcrumb-item {
@@ -484,6 +502,7 @@ input[type="email"].form-control-flush,
     padding: .75rem 1rem;
     display: block;
     width: 100%;
+    letter-spacing: .15em;
 }
 
 .product-buy-content .botao-commerce.botao-comprar:hover {
