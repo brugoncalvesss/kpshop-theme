@@ -49,6 +49,20 @@
                     </form>
                 </div>
 
+                <div class="product-description">
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseDescription" role="button" aria-expanded="false" aria-controls="collapseDescription">
+                        <div class="flex justify-content-between">
+                            <div class="text-uppercase">Descrição</div>
+                            <div>+</div>
+                        </div>
+                    </a>
+                    <div class="collapse" id="collapseDescription">
+                        <div class="card card-body">
+                            {{ product.description ? product.description : product.description_small }}
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- end product info -->
 
@@ -60,7 +74,8 @@
                 {{ productHelper.labels() }}
             </div>
 
-            <div class="product-details">
+            <!-- Marca, disponibilidade e referência -->
+            <div class="product-details d-none">
                 {{ productHelper.details() }}
             </div>
 
