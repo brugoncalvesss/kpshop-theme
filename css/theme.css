@@ -152,6 +152,14 @@ a:focus {
     font-weight: 500;
 }
 
+.menu-categorie .nav-link {
+    color: #000;
+}
+
+.menu-categorie .nav-link:hover {
+    color: rgba(0, 0, 0, .7);
+}
+
 /* Footer */
 .footer .footer-title {
     font-size: 0.875rem;
@@ -589,11 +597,13 @@ input[type="email"].form-control-flush,
     border-bottom: 1px solid #dedede;
 }
 
-.product-info .product-description .description-title {
-    font-size: 0.875rem;
-    letter-spacing: .08em;
-    position: relative;
-    cursor: pointer;
+.product-description .accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: #fff;
+}
+
+.product-description .accordion-button:focus {
+    box-shadow: none;
 }
 
 /* Formas de pagamento */

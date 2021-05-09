@@ -39,22 +39,27 @@
                     <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
                         {{ productHelper.pricing() }}
                         {{ productHelper.variants() }}
-                        <!-- {{ product.additional_information }} -->
+                        {{ product.additional_information }}
                         {{ productHelper.gifts() }}
                         {{ productHelper.form() }}
-                        <!-- {{ productHelper.wishlist() }} -->
+                        {{ productHelper.wishlist() }}
                         {{ productHelper.shipping() }}
                     </form>
                 </div>
 
-                <div class="product-description mt-5">
-                    <div class="description-title d-flex justify-content-between py-3" data-bs-toggle="collapse" href="#collapseDescription">
-                        <span class="text-uppercase">Descrição</span>
-                        <span>+</span>
-                    </div>
-                    <div class="collapse" id="collapseDescription">
-                        <div>
-                            {{ product.description ? product.description : product.description_small }}
+                <div class="product-description my-4">
+                    <div class="accordion accordion-flush accordion-description" id="accordionDescription">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingDescription">
+                                <button class="accordion-button px-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <span class="text-uppercase">Descrição</span>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingDescription" data-bs-parent="#accordionDescription">
+                                <div class="accordion-body px-0 text-justify">
+                                    {{ product.description ? product.description : product.description_small }}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,7 +76,7 @@
             </div>
 
             <!-- Marca, disponibilidade e referência -->
-            <div class="product-details d-none">
+            <div class="product-details">
                 {{ productHelper.details() }}
             </div>
 
