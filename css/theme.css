@@ -1,6 +1,12 @@
 /* reset tray css */
-.container {
+.container,
+.container1,
+.container2,
+.container3,
+.container4 {
     background: none;
+    float: none;
+    border-width: 0;
 }
 
 .container::after {
@@ -161,6 +167,10 @@ a:focus {
 }
 
 /* Footer */
+.footer {
+    margin-top: 1.5rem;
+}
+
 .footer .footer-title {
     font-size: 0.875rem;
     text-transform: uppercase;
@@ -249,7 +259,82 @@ input[type="email"].form-control-flush,
 /* Buttons */
 .btn {
     font-size: 0.75rem;
+}
+
+.botao-commerce {
+    display: inline-block;
+    font-weight: 400;
     line-height: 1.6;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 0.75rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,
+                background-color .15s ease-in-out,
+                border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
+}
+
+.botao-commerce:hover {
+    color: #212529;
+}
+
+.botao-calcular-frete,
+.botao-cupom-desconto,
+.botao-efetuar-login,
+.botao-enviar-cadastro,
+.botao-enviar-cartao,
+.botao-finalizar-compra,
+.botao-novo-cadastro,
+.botao-prosseguir-cadastro,
+.botao-prosseguir-compra,
+.botao-recuperar-senha,
+.botao-salvar-lista,
+.botao-simular-frete,
+a.botao-calcular-frete,
+a.botao-cupom-desconto,
+a.botao-efetuar-login,
+a.botao-enviar-cadastro,
+a.botao-enviar-cartao,
+a.botao-finalizar-compra,
+a.botao-novo-cadastro,
+a.botao-prosseguir-cadastro,
+a.botao-prosseguir-compra,
+a.botao-recuperar-senha,
+a.botao-salvar-lista,
+a.botao-simular-frete {
+    color: #fff;
+    background-image: none;
+    background-color: #212529;
+    border-color: #212529;
+}
+
+.botao-calcular-frete:hover,
+.botao-cupom-desconto:hover,
+.botao-efetuar-login:hover,
+.botao-enviar-cadastro:hover,
+.botao-enviar-cartao:hover,
+.botao-finalizar-compra:hover,
+.botao-novo-cadastro:hover,
+.botao-prosseguir-cadastro:hover,
+.botao-prosseguir-compra:hover,
+.botao-recuperar-senha:hover,
+.botao-salvar-lista:hover,
+.botao-simular-frete:hover {
+    font-weight: inherit;
+    color: #fff;
+    background-image: none;
+    background-color: #1c1f23;
+    border-color: #1a1e21;
 }
 
 .btn-icon {
@@ -847,4 +932,41 @@ input[type="email"].form-control-flush,
     .owl-thumbs .owl-thumb-item:not(:last-child) {
         margin-bottom: 0.625rem;
     }
+}
+
+/* Login */
+.container-titulo-login .bottom {
+    background: none;
+    height: auto;
+    display: none;
+}
+
+.container2 .board {
+    margin: 0;
+}
+
+.container2 .bottom {
+    background: none;
+    height: auto;
+    display: none;
+}
+
+.container2 .bottom .bLeft,
+.container2 .bottom .bRight {
+    float: none;
+    width: auto;
+    height: auto;
+    background: none;
+}
+
+.tray-login .tray-title {
+    font-family: 'Spartan', sans-serif;
+    font-size: 1rem;
+    color: #000;
+    font-weight: 500;
+}
+
+/* Carrinho */
+.carrinho-heading {
+    margin-bottom: 1.5rem!important;
 }
