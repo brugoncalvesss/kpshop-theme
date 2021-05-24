@@ -53,7 +53,8 @@
         <div class="container">
 
             <div class="banner banner-home mb-4">
-                {{ banner.home }}
+                <div>{{ banner.home }}</div>
+                <div>{{ banner.extra1 }}</div>
             </div>
             
         </div>
@@ -62,9 +63,6 @@
     <section class="container page-content">
         {{ content_for_layout }}
     </section>
-    
-    {% element 'snippets/tagcloud' %}
-    {% element 'snippets/history' %}
 
     {% if banner.bottom %}
         <div class="container">
@@ -75,6 +73,14 @@
             
         </div>
     {% endif %}
+
+    <div class="d-none">
+        {% element 'snippets/tagcloud' %}
+    </div>
+
+    <div class="d-none">
+        {% element 'snippets/history' %}
+    </div>
 
     {% if utils.is_mobile %}
         {% element 'mobile/footer' %}
