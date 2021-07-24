@@ -2,7 +2,7 @@
     <div class="row g-1 justify-content-between me-lg-3">
         <div class="col-lg-10 order-lg-2">
 
-            <div class="owl-carousel product-carousel" data-slider-id="1">
+            <div id="owl-product" class="owl-carousel product-carousel" data-slider-id="1">
                 {% set images = product.images %}
                 {% for image in images %}
                 <a data-fancybox="gallery" href="{{ image.full }}">

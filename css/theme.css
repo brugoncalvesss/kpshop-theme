@@ -23,6 +23,15 @@
 }
 
 /* Theme */
+:root {
+    --primary-color: #14395f;
+    --secondary-color: #9d4422;
+    --neutral-color: #c18d5e;
+    --muted-color: #ddbfb4;
+    --gray-color: #d2c5bd;
+    --base-color: #f7eedd;
+}
+
 body {
     font-family: 'Spartan', sans-serif;
     font-size: 0.75rem;
@@ -849,6 +858,50 @@ a.botao-simular-frete {
 #ProdAbas .aberta .nav-link {
     background-color: #fff;
     border-color: #dee2e6 #dee2e6 #fff;
+}
+
+/* Banner */
+#owl-slide .owl-dots {
+    position: absolute;
+    text-align: center;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: scale(.7);
+    white-space: nowrap;
+    transition: opacity .3s;
+    transition: transform .2s,left .2s;
+    z-index: 10;
+}
+
+#owl-slide .owl-dots .owl-dot {
+    position: relative;
+    opacity: .8;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 0 4px;
+}
+
+#owl-slide .owl-dots .owl-dot.active {
+    transform: scale(1);
+    opacity: 1;
+    background: #fff;
+}
+
+#owl-slide .owl-nav button.owl-next {
+    right: 15px;
+}
+
+#owl-slide .owl-nav button.owl-prev {
+    left: 15px;
+}
+
+#owl-slide .owl-nav button.owl-prev::before,
+#owl-slide .owl-nav button.owl-next::before {
+    color: #fff;
 }
 
 /* carousel */
