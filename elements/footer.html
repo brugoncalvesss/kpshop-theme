@@ -1,43 +1,35 @@
 <footer class="footer bg-nude py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h4 class="footer-title">Trocas e devoluções</h4>
-                {% element 'snippets/help_links' %}
-            </div>
-            <div class="col-sm-3">
+        <div class="row row-cols-2 row-cols-sm-4">
+            <div class="col">
                 <h4 class="footer-title">Institucional</h4>
                 {% element 'snippets/page_links' %}
-            </div>
-            <div class="col-sm-3">
-                <h4 class="footer-title">Fale conosco</h4>
-                {% element 'snippets/contact_links' %}
                 {% element 'snippets/social_links' %}
             </div>
-            <div class="col-sm-3">
+            <div class="col">
+                <h4 class="footer-title">Informações</h4>
+                {% element 'snippets/help_links' %}
+            </div>
+            <div class="col">
+                <h4 class="footer-title">Fale conosco</h4>
+                {% element 'snippets/contact_links' %}
+            </div>
+            <div class="col">
                 <h4 class="footer-title">Newsletter</h4>
                 {% element 'snippets/newsletter' %}
             </div>
         </div>
     </div>
 </footer>
-<div class="copyright bg-nude pt-2">
+<div class="copyright bg-nude">
     <div class="container">
-        <div class="row">
+        <div class="row row-cols-2 row-cols-sm-2 align-items-center">
             <div class="col">
-                <span class="text-dark">2021, kahpe.</span>
+                <div class="text-dark">2021, kahpe.</div>
             </div>
             <div class="col">
-                <div class="d-flex justify-content-center justify-content-sm-end align-items-center d-grid gap-3 h3 mb-0">
-                    <div class="p-2"><i class="fab fa-cc-visa"></i></div>
-                    <div class="p-2"><i class="fab fa-cc-mastercard"></i></div>
-                    <div class="p-2"><i class="fab fa-cc-diners-club"></i></div>
-                    <div class="p-2"><i class="fab fa-cc-amex"></i></div>
-                    <div class="p-2"><i class="fab fa-cc-paypal"></i></div>
-                    <div class="p-2"><i class="fab fa-cc-apple-pay"></i></div>
-                    <div class="p-2">
-                        <img src="{{ asset('img/le-logo-standard-black.svg') }}" width="50" alt="Lets Encrypt">
-                    </div>
+                <div class="d-flex justify-content-center justify-content-sm-end p-2">
+                    <img src="{{ asset('img/le-logo-standard-black.svg') }}" width="60" alt="Lets Encrypt">
                 </div>
             </div>
         </div>
