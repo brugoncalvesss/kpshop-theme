@@ -25,6 +25,7 @@
 /* Theme */
 :root {
     --primary-color: #14395f;
+    --primary-color-hover: #1a4a7b;
     --secondary-color: #9d4422;
     --neutral-color: #c18d5e;
     --muted-color: #ddbfb4;
@@ -33,8 +34,8 @@
 }
 
 body {
-    font-family: 'Spartan', sans-serif;
-    font-size: 0.75rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.85rem;
     letter-spacing: 0.02rem;
     font-weight: 400;
     color: #2D2C2F;
@@ -71,7 +72,7 @@ body {
 }
 
 .h6, h6 {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 p {
@@ -79,7 +80,6 @@ p {
     border-bottom-width: 0;
 }
 
-/* Cores */
 a {
     color: #000;
     text-decoration: none;
@@ -93,12 +93,23 @@ a:focus {
     outline: none;
 }
 
+/*
+ * Cores
+ */
+.text-primary {
+    color: var(--primary-color)!important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color)!important;
+}
+
 .bg-nude {
-    background-color: #E4D7C5!important;
+    background-color: var(--base-color)!important;
 }
 
 .text-nude {
-    color: #E4D7C5!important;
+    color: var(--base-color)!important;
 }
 
 /* Benefícios */
@@ -128,16 +139,16 @@ a:focus {
 }
 
 .infobox, .infobox span {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 .infobox a {
-    color: #ed4c78;
+    color: #d9534f;
 }
 
 .infobox.danger {
-    color: #ed4c78;
-    background-color: rgba(237,76,120,.1);
+    color: #d9534f;
+    background-color: rgba(217,83,79,.175);
 }
 
 .alert,
@@ -178,7 +189,7 @@ a:focus {
 
 /* Dropdown */
 .dropdown-menu {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
@@ -296,7 +307,7 @@ input[type="email"].form-control-flush,
 }
 
 .btn {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 .botao-commerce {
@@ -314,7 +325,7 @@ input[type="email"].form-control-flush,
     background-color: transparent;
     border: 1px solid transparent;
     padding: .375rem .75rem;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     border-radius: .25rem;
     transition: color .15s ease-in-out,
                 background-color .15s ease-in-out,
@@ -324,7 +335,6 @@ input[type="email"].form-control-flush,
 
 .botao-commerce:hover {
     border-radius: .25rem;
-    color: #212529;
 }
 
 .botao-calcular-frete,
@@ -353,8 +363,8 @@ a.botao-salvar-lista,
 a.botao-simular-frete {
     color: #fff;
     background-image: none;
-    background-color: #212529;
-    border-color: #212529;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .botao-calcular-frete:hover,
@@ -372,8 +382,8 @@ a.botao-simular-frete {
     font-weight: inherit;
     color: #fff;
     background-image: none;
-    background-color: #1c1f23;
-    border-color: #1a1e21;
+    background-color: var(--primary-color-hover);
+    border-color: var(--primary-color-hover);
 }
 
 .btn-icon {
@@ -386,7 +396,7 @@ a.botao-simular-frete {
     justify-content: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 400;
     width: 2.625rem;
     height: 2.625rem;
@@ -440,7 +450,7 @@ a.botao-simular-frete {
 
 .btn-status-nude {
     color: #000;
-    background-color: #E4D7C5;
+    background-color: var(--base-color);
 }
 
 .btn.rounded-circle .btn-status {
@@ -487,7 +497,7 @@ a.botao-simular-frete {
 
 .breadcrumb .breadcrumb-item {
     color: #1e2022;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
 }
 
@@ -531,7 +541,7 @@ a.botao-simular-frete {
 }
 
 .product .product-brand {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     color: #000;
 }
@@ -552,7 +562,7 @@ a.botao-simular-frete {
 }
 
 .produto-wrapper .product-name h1 {
-    font-family: 'Spartan', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: .08em;
@@ -572,7 +582,7 @@ a.botao-simular-frete {
 }
 
 .product-buy-content #info_preco {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 500;
     font-style: normal;
     color: #a8a8a8;
@@ -596,7 +606,7 @@ a.botao-simular-frete {
 }
 
 .product-buy-content .precode {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 500;
     color: #888;
 }
@@ -617,12 +627,12 @@ a.botao-simular-frete {
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-    color: #000;
 }
 
 .product-buy-content .botao-commerce.botao-comprar {
-    background-color: #efeae2;
-    border-color: #efeae2;
+    color: #FFF;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
     padding: .85rem 1rem;
     display: block;
     width: 100%;
@@ -630,8 +640,8 @@ a.botao-simular-frete {
 }
 
 .product-buy-content .botao-commerce.botao-comprar:hover {
-    background-color: #e3dacc;
-    border-color: #e3dacc;
+    background-color: var(--primary-color-hover);
+    border-color: var(--primary-color-hover);
 }
 
 .product-buy-content .botao-comprar .botao-commerce-img {
@@ -656,8 +666,8 @@ a.botao-simular-frete {
 
 .product-buy-content #produto_nao_disp .botao-nao_indisponivel::after {
     content: 'Para ser avisado da disponibilidade deste produto, basta preencher os campos abaixo.';
-    font-family: 'Spartan', sans-serif;
-    font-size: 0.75rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.85rem;
     font-weight: 400;
     letter-spacing: 0;
     text-transform: none;
@@ -838,7 +848,7 @@ a.botao-simular-frete {
 
 #ProdAbas a,
 #ProdAbas .aberta a {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 500;
 }
 
@@ -1037,7 +1047,7 @@ a.botao-simular-frete {
 }
 
 .tray-login .tray-title {
-    font-family: 'Spartan', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     color: #000;
     font-weight: 500;
@@ -1080,7 +1090,7 @@ a.botao-simular-frete {
 }
 
 #CadastroAbas .aberta a {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 500;
     color: #495057;
     padding: .5rem 1rem;
@@ -1089,7 +1099,7 @@ a.botao-simular-frete {
 }
 
 .Seguro {
-    font-family: 'Spartan', sans-serif;
+    font-family: 'Raleway', sans-serif;
     top: 10px;
     color: #000;
 }
@@ -1140,6 +1150,11 @@ a.botao-simular-frete {
     width: auto;
     min-height: auto;
     background: none;
+}
+
+/* Page Info */
+.page-content .board {
+    margin: 0;
 }
 
 /* Carrinho */
