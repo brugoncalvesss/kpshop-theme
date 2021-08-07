@@ -27,6 +27,7 @@
     --primary-color: #14395f;
     --primary-color-hover: #1a4a7b;
     --secondary-color: #9d4422;
+    --secondary-color-hover: #b95028;
     --neutral-color: #c18d5e;
     --muted-color: #ddbfb4;
     --gray-color: #d2c5bd;
@@ -676,9 +677,10 @@ a.botao-simular-frete {
 }
 
 .product-buy-content #produto_nao_disp #nao_disp label {
-    font-size: .75rem;
-    font-weight: 500;
-    letter-spacing: 0;
+    color: #6c757d;
+    font-size: .875em;
+    text-transform: uppercase;
+    letter-spacing: .08em;
     margin-top: 3rem;
     margin-bottom: 1rem;
     display: block;
@@ -689,10 +691,10 @@ a.botao-simular-frete {
 }
 
 .product-buy-content #letMeKnow {
-    padding: .5rem .75rem;
+    padding: .85rem 1rem;
     line-height: 1.5;
-    color: #000;
-    background-color: #E4D7C5;
+    color: #FFF;
+    background-color: var(--secondary-color);
     width: 100%;
     text-align: center;
     display: block;
@@ -700,12 +702,12 @@ a.botao-simular-frete {
 }
 
 .product-buy-content #letMeKnow:hover {
-    background-color: #efe7dc;
+    background-color: var(--secondary-color-hover);
 }
 
 .product-buy-content #letMeKnow::before {
     content: "Avise-me quando chegar";
-    font-size: .75rem;
+    font-size: .85rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -742,6 +744,53 @@ a.botao-simular-frete {
 /* Quantidade */
 #quantidade {
     display: none;
+}
+
+/* Variação */
+.product-buy-content .texto_variacao {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.product-buy-content .texto_variacao h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: .85rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    float: none;
+}
+
+.product-buy-content .texto_variacao span {
+    float: none;
+    margin-right: 0;
+    /* visually-hidden */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.product-buy-content .lista_cor_variacao,
+.product-buy-content .lista_cor_variacao2 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.product-buy-content .lista_cor_variacao li img,
+.product-buy-content .lista_cor_variacao2 li img {
+    padding: 1px;
+}
+
+.product-buy-content div.cor_selecionada,
+.product-buy-content img.cor_selecionada {
+    border: 1px solid var(--secondary-color)!important;
 }
 
 /*
