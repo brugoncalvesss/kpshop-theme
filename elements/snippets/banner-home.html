@@ -1,19 +1,15 @@
 {% if pages.current == 'home' %}
 <section class="container banner banner-home mb-4">
-    {% if utils.is_mobile %}
-
-    {% else %}
-        {% if banner.home %}
-            <div id="owl-slide" class="owl-carousel owl-theme">
-            {% for slide in banners.home.slides %}
-                <div class="item">
-                <a href="{{ slide.link }}">
-                    <img src="{{ slide.image }}" alt="{{ slide.label}}">
-                </a>
-                </div>
-            {% endfor %}
-            </div>
-        {% endif %}
+    {% if banner.home %}
+    <div id="owl-slide" class="owl-carousel owl-theme">
+    {% for slide in banners.home.slides %}
+        <div class="item">
+        <a href="{{ slide.link }}">
+            <img src="{{ slide.image }}" alt="{{ slide.label}}">
+        </a>
+        </div>
+    {% endfor %}
+    </div>
     {% endif %}
 </section>
 {% endif %}
