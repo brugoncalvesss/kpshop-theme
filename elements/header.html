@@ -1,38 +1,25 @@
 {% element 'snippets/messages' %}
 
-<div class="header-top d-none d-md-block bg-nude">
-  <div class="container">
-      <ul class="list-inline text-uppercase text-center py-2 mb-0">
-          <li class="list-inline-item">Entrega em todo Brasil</li>
-          <li class="list-inline-item">Pague em até 12x sem juros</li>
-          <li class="list-inline-item">Troca rápida e fácil</li>
-      </ul>
-  </div>
+<div class="header-top bg-nude">
+    <div class="container">
+        {% element 'snippets/customer' %}
+    </div>
 </div>
 
-<nav class="navbar navbar-expand-md">
-  <div class="container">
+<nav class="navbar">
+    <div class="container justify-content-center">
 
-    <a class="brand" href="{{ links.home }}" title="{{ store.name }}" data-tray-tst="logotipo_loja">
-        {{ Image('logo') }}
-    </a>
+        <a class="brand navbar-brand" href="{{ links.home }}" title="{{ store.name }}" data-tray-tst="logotipo_loja">
+            {{ Image('logo') }}
+        </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navCategoria" aria-controls="navCategoria" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="nav-shop">
-      {% element 'snippets/customer' %}
     </div>
-      
-  </div>
 </nav>
 
-<nav class="py-2 mb-3 mb-md-4">
-  <div class="container">
-    <!-- <div class="navbar-collapse" id="navCategoria"> -->
-    <div class="row">
-    {% element 'snippets/menu_categories' %}
+<nav class="py-2 mb-3">
+    <div class="container">
+        <div class="row">
+            {% element 'snippets/menu_categories' %}
+        </div>
     </div>
-  </div>
 </nav>

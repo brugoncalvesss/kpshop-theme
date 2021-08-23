@@ -116,7 +116,11 @@ a:focus {
 
 /* Benefícios */
 .header-top {
-    font-size: 0.625rem;
+    font-size: 0.85rem;
+    color: #000;
+}
+
+.header-top .nav-link {
     color: #000;
 }
 
@@ -542,33 +546,21 @@ a.botao-simular-frete {
     margin-bottom: 1.5rem;
 }
 
-.product .product-brand {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    color: #000;
-}
-
-.product .product-name {
-    color: #474747;
-}
-
-.product .product-price {
-    font-weight: 500;
-}
-
-.produto-wrapper .product-brand {
+.produto-wrapper .product-name {
     font-family: 'Lustria', serif;
     letter-spacing: .08em;
     font-size: 1.25rem;
     color: #000;
 }
 
-.produto-wrapper .product-name h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: .08em;
+.produto-wrapper .product-brand {
     color: #474747;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.product .product-price {
+    font-weight: 500;
 }
 
 .produto-wrapper .product-reference {
@@ -1210,6 +1202,44 @@ a.botao-simular-frete {
 /* Carrinho */
 .carrinho-heading {
     margin-bottom: 1.5rem!important;
+}
+
+/* Floating WPP */
+.float-wpp {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    line-height: 50px;
+    font-size: 28px;
+    box-shadow: 1px 1px 3px #ccc;
+    z-index: 100;
+    display: none;
+}
+
+.float-wpp .fa {
+    padding-left: 3px;
+}
+
+@media (min-width: 768px) {
+    .float-wpp {
+        display: block;
+    }
+}
+
+/* Badge */
+.badge-light {
+    color: #212529;
+    background-color: #f8f9fa;
+}
+
+.badge-dark {
+    color: #fff;
+    background-color: #343a40;
 }
 
 /* Mobile */
