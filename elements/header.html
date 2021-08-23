@@ -1,6 +1,6 @@
 {% element 'snippets/messages' %}
 
-<div class="header-top d-none d-md-block bg-nude">
+<div class="header-top bg-nude">
     <div class="container">
         {% element 'snippets/customer' %}
     </div>
@@ -12,15 +12,14 @@
         <a class="brand navbar-brand" href="{{ links.home }}" title="{{ store.name }}" data-tray-tst="logotipo_loja">
             {{ Image('logo') }}
         </a>
-      
+
     </div>
 </nav>
 
-<nav class="py-2 mb-3 mb-md-4">
+<nav class="py-2 mb-3">
     <div class="container">
-    <!-- <div class="navbar-collapse" id="navCategoria"> -->
         <div class="row">
-        {% element 'snippets/menu_categories' %}
+            {% element 'snippets/menu_categories' %}
         </div>
     </div>
 </nav>
