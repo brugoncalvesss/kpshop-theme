@@ -73,11 +73,9 @@
         {% element 'snippets/history' %}
     </div>
 
-    {% if utils.is_mobile %}
-        {% element 'mobile/footer' %}
-    {% else %}
+    <div>
         {% element 'footer' %}
-    {% endif %}
+    </div>
 
     {% if banner.footer %}
     <div class="container"></div>

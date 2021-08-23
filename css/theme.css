@@ -32,6 +32,7 @@
     --muted-color: #ddbfb4;
     --gray-color: #d2c5bd;
     --base-color: #f7eedd;
+    --dark-color: #000;
 }
 
 body {
@@ -1239,4 +1240,36 @@ a.botao-simular-frete {
 .badge-dark {
     color: #fff;
     background-color: #343a40;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .logotipo {
+        background-color: transparent!important;
+    }
+    footer ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    footer li a {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1rem;
+        color: var(--dark-color)!important;
+        padding: 0;
+    }
+
+    .footer .bgcolor {
+        background: transparent;
+    }
+
+    .copyright .container {
+        margin-top: 0;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    #NavLogoTray {
+        display: none!important;
+    }
 }
