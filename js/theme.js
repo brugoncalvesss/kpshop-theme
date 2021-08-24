@@ -4,14 +4,10 @@
     jQuery(function() {
         $('#owl-product').owlCarousel({
             items: 1,
-            nav: true,
-            dots: false,
+            nav: false,
+            dots: true,
             loop: false,
-            thumbs: true,
-            thumbImage: false,
-            thumbsPrerendered: true,
-            thumbContainerClass: 'owl-thumbs',
-            thumbItemClass: 'owl-thumb-item'
+            thumbs: false
         });
 
         $("#owl-slide").owlCarousel({

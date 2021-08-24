@@ -1,16 +1,16 @@
 <ul class="nav justify-content-end">
     <li class="nav-item tray-hide" data-logged-user="true">
-        OlÃ¡ <span data-customer="name"></span>
+        Olá <span data-customer="name"></span>
         <a class="nav-link active" href="{{ links.logout }}">Sair</a>
     </li>
     <li class="nav-item" data-logged-user="false">
-        <a class="nav-link" href="{{ links.login }}">
-            <i class="fas fa-user"></i>
+        <a class="nav-link px-2" href="{{ links.login }}">
+            <img src="{{ asset('img/user.png') }}" width="18" alt="Login">
         </a>
     </li>
     <li class="nav-item">
-        <a href="{{ links.cart }}" class="nav-link">
-            <i class="fas fa-shopping-cart"></i>
+        <a class="nav-link px-2" href="{{ links.cart }}">
+            <img src="{{ asset('img/shopping-bag.png') }}" width="20" alt="Cart">
             <span class="badge badge-dark" data-cart="amount">0</span>
         </a>
     </li>
