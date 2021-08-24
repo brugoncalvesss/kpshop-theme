@@ -1063,6 +1063,34 @@ a.botao-simular-frete {
     }
 }
 
+.product-carousel .owl-dots {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-carousel .owl-dots .owl-dot {
+    margin-bottom: 15px;
+}
+
+.product-carousel .owl-dots .owl-dot span {
+    border-radius: 100%;
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--muted-color);
+    display: block;
+}
+
+.product-carousel .owl-dots .owl-dot.active span {
+    background-color: var(--muted-color);
+}
+
 /* Login */
 .container-titulo-login .bottom {
     background: none;
@@ -1207,22 +1235,15 @@ a.botao-simular-frete {
 /* Floating WPP */
 .float-wpp {
     position: fixed;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     bottom: 30px;
     right: 30px;
-    background-color: #25d366;
-    color: #FFF;
+    color: #000;
     border-radius: 50px;
-    line-height: 50px;
     font-size: 28px;
-    box-shadow: 1px 1px 3px #ccc;
     z-index: 100;
     display: none;
-}
-
-.float-wpp .fa {
-    padding-left: 3px;
 }
 
 @media (min-width: 768px) {
