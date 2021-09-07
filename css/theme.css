@@ -624,9 +624,9 @@ a.botao-simular-frete {
 }
 
 .product-buy-content .botao-commerce.botao-comprar {
-    color: #FFF;
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--dark-color);
+    background-color: var(--base-color);
+    border-color: var(--base-color);
     padding: .85rem 1rem;
     display: block;
     width: 100%;
@@ -634,8 +634,8 @@ a.botao-simular-frete {
 }
 
 .product-buy-content .botao-commerce.botao-comprar:hover {
-    background-color: var(--primary-color-hover);
-    border-color: var(--primary-color-hover);
+    background-color: var(--neutral-color);
+    border-color: var(--neutral-color);
 }
 
 .product-buy-content .botao-comprar .botao-commerce-img {
@@ -1233,23 +1233,30 @@ a.botao-simular-frete {
 }
 
 /* Floating WPP */
-.float-wpp {
+.btn-wpp {
     position: fixed;
-    width: 45px;
-    height: 45px;
     bottom: 30px;
     right: 30px;
-    color: #000;
-    border-radius: 50px;
-    font-size: 28px;
     z-index: 100;
-    display: none;
+    background-color: #FFF;
 }
 
-@media (min-width: 768px) {
-    .float-wpp {
-        display: block;
-    }
+.btn-wpp:hover {
+    width: 230px;
+    transition: all 1s ease-in-out;
+}
+
+.btn-wpp .fa-whatsapp {
+    font-size: 22px;
+}
+
+.btn-wpp span {
+    display: none;
+    font-weight: 600;
+}
+
+.btn-wpp:hover span {
+    display: inline-block;
 }
 
 /* Badge */
@@ -1265,9 +1272,26 @@ a.botao-simular-frete {
 
 /* Mobile */
 @media (max-width: 768px) {
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        margin-right: 0!important;
+        margin-left: 0!important;
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+    }
+
+    a {
+        color: #000!important;
+        text-decoration: none;
+    }
+
+    header {
+        background: #fff;
+    }
+
     .logotipo {
         background-color: transparent!important;
     }
+
     footer ul {
         margin-top: 0;
         margin-bottom: 0;
@@ -1275,6 +1299,7 @@ a.botao-simular-frete {
 
     footer li a {
         font-family: 'Raleway', sans-serif;
+        font: inherit;
         font-size: 1rem;
         color: var(--dark-color)!important;
         padding: 0;
@@ -1292,5 +1317,94 @@ a.botao-simular-frete {
 
     #NavLogoTray {
         display: none!important;
+    }
+
+    #produto_preco {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .PrecoPrincipal {
+        font: inherit;
+    }
+
+    .texto_variacao, .varTit {
+        background: transparent;
+    }
+
+    .texto_variacao h2, .varTit strong, .texto_variacao span, .varTit {
+        color: inherit;
+    }
+
+    .lista_cor_variacao, .lista_cor_variacao2, .lista_cor_variacao3, .varContAdd {
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    .lista_cor_variacao li, .lista_cor_variacao2 li, .lista_cor_variacao3 li {
+        padding: 0;
+        border-radius: 0!important;
+        border-width: 0;
+    }
+
+    .lista_cor_variacao li div, .lista_cor_variacao2 li div, .lista_cor_variacao3 li div {
+        background: transparent;
+        border: 1px solid #e5e5e5;
+        color: #000;
+        font: inherit;
+        font-weight: 600;
+        line-height: 40px;
+    }
+
+    .cor_selecionada {
+        outline: none;
+    }
+
+    #bt_comprar button {
+        font-size: 1rem;
+        color: inherit;
+    }
+
+    .product {
+        margin-bottom: 1rem;
+    }
+
+    .product .product-image {
+        margin-bottom: .5rem;
+    }
+
+    .product .product-name {
+        white-space: normal;
+        margin-bottom: .5rem!important;
+    }
+
+    .product-carousel .owl-dots {
+        position: relative;
+        flex-direction: row;
+        justify-content: flex-start;
+        right: 0;
+    }
+
+    .product-carousel .owl-dot {
+        margin: .5rem .5rem 0 0;
+    }
+
+    /* Footer */
+    .social-list {
+        display: none;
+    }
+
+    .footer .container {
+        margin-top: 0;
+        padding: 0 15px;
+    }
+
+    footer ul {
+        padding: 0!important;
+        margin-bottom: 1.5rem!important;
+    }
+
+    footer ul li {
+        text-align: left;
     }
 }

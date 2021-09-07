@@ -6,6 +6,16 @@
     <!-- [if IE]<meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ tray.styles }}
+    
+    {{ tray.scripts }}
+    {{ tray.analytics }}
+    {{ googleTagManager.header(pages.current, tagManagerData) }}
+
+    {% if utils.is_mobile %}
+        <link rel="stylesheet" href="//images.tcdn.com.br/img/arquivos/identidade_visual/css/sistema.css?{{ utils.assets_version }}">  
+        <link rel="stylesheet" href="//images.tcdn.com.br/img/arquivos/mobile/css/open-mobilev2.css?{{ utils.assets_version }}">
+        <script src="//images.tcdn.com.br/img/arquivos/mobile/scripts/open-mobilev2.js?{{ utils.assets_version }}"></script>
+    {% endif %}
 
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -20,16 +30,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lustria&display=swap" rel="stylesheet">
-    
-    {{ tray.scripts }}
-    {{ tray.analytics }}
-    {{ googleTagManager.header(pages.current, tagManagerData) }}
-
-    {% if utils.is_mobile %}
-        <link rel="stylesheet" href="//images.tcdn.com.br/img/arquivos/identidade_visual/css/sistema.css?{{ utils.assets_version }}">  
-        <link rel="stylesheet" href="//images.tcdn.com.br/img/arquivos/mobile/css/open-mobilev2.css?{{ utils.assets_version }}">
-        <script src="//images.tcdn.com.br/img/arquivos/mobile/scripts/open-mobilev2.js?{{ utils.assets_version }}"></script>
-    {% endif %}
 
     <!-- Fancybox -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />

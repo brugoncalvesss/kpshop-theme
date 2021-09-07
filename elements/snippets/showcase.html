@@ -6,16 +6,12 @@
         </div>
     {% endif %}
 
-    <div class="row">
+    <div class="row row-cols-2 row-cols-lg-4">
         {% for product in products %}
 
-            <div class="col-sm-4 product mb-3">
+            <div class="product mb-3">
                 {% element 'snippets/product' {"product": product} %}
             </div>
-
-            {% if loop.index is divisible by(3) %}
-                </div><div class="row">
-            {% endif %}
 
         {% endfor %}
     </div>
